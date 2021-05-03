@@ -26,11 +26,11 @@ fun main() {
     for (spice in filteredSpice) println(spice.name)*/
     val myCurry = Curry("Indian Curry")
     myCurry.prepareSpice()
+    println(myCurry.color)
 }
 
 fun buildAquarium() {
     val myAquarium = Aquarium()
-
     println("Height: ${myAquarium.height}")
     println("Length: ${myAquarium.length}")
     println("Width: ${myAquarium.width}")

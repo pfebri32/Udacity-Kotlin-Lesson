@@ -6,12 +6,12 @@ abstract class Spice(
     color: SpiceColor = YellowSpiceColor,
 ) : SpiceColor by color {
     val heat: Int
-        get() = when {
-            spiciness == "insanely hot" -> 10
-            spiciness == "hot" -> 7
-            spiciness == "mild" -> 5
-            spiciness == "very mild" -> 3
-            spiciness == "very very mild" -> 1
+        get() = when (spiciness) {
+            "insanely hot" -> 10
+            "hot" -> 7
+            "mild" -> 5
+            "very mild" -> 3
+            "very very mild" -> 1
             else -> 0
         }
 
@@ -20,10 +20,6 @@ abstract class Spice(
     }
 
     abstract fun prepareSpice()
-
-    fun makeSalt() {
-        println("Make salt.")
-    }
 }
 
 interface Grinder {
