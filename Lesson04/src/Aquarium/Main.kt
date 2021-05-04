@@ -1,12 +1,20 @@
 package Aquarium
 
+import Aquarium.Decorations.Decorations
 import SimpleSpice.Curry
 import SimpleSpice.SimpleSpice
 import SimpleSpice.Spice
+import SimpleSpice.SpiceContainer
 
 fun main() {
     // Main
     buildAquarium()
+
+    val myDecoration = Decorations("granite", "wood", "diver")
+    val (rock, wood, diver) = myDecoration
+    println("Rock: $rock")
+    println("Wood: $wood")
+    println("Diver: $diver")
 
     // 3. Practice Time
     val mySimpleSpice = SimpleSpice()
@@ -27,7 +35,16 @@ fun main() {
     val myCurry = Curry("Indian Curry")
     myCurry.prepareSpice()
     println(myCurry.color)
+
+    // 12. Practice Time
+    val mySpiceContainer = SpiceContainer(myCurry)
+    println(mySpiceContainer.label)
+
+    // 14. Practice Time
+
 }
+
+
 
 fun buildAquarium() {
     val myAquarium = Aquarium()

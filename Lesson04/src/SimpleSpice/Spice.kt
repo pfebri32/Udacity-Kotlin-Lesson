@@ -28,12 +28,16 @@ interface Grinder {
     }
 }
 
+enum class COLOR(val color: Int) {
+    YELLOW(0xFFFF00)
+}
+
 interface SpiceColor {
-    val color: String
+    val color: COLOR
 }
 
 object YellowSpiceColor: SpiceColor {
-    override val color = "yellow"
+    override val color = COLOR.YELLOW
 }
 
 class Curry(
